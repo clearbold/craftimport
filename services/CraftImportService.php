@@ -25,6 +25,7 @@ class CraftImportService extends BaseApplicationComponent
 			    'title' => "Title ".$i,
 				'slug' => "title-".$i
 			));
+			/*
 			if ( craft()->entries->saveEntry($entry) )
 			{
 				$i++;
@@ -32,7 +33,7 @@ class CraftImportService extends BaseApplicationComponent
 			} else {
 				$retVal = false;
 				break;
-			}
+			}*/
 		}
 		return $retVal;
 	}
