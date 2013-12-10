@@ -28,4 +28,11 @@ class CraftImportPlugin extends BasePlugin
     {
         return true;
     }
+
+    /*public function getSettingsHtml()
+    {
+        return craft()->templates->render(
+            'craftimport/index'
+        );
+    }*/
 }

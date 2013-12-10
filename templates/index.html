@@ -5,16 +5,10 @@
 
 {% set content %}
 
-	<p>Populate the DB for testing</p>
-    <table class="data">
-        <thead>
-            <th scope="col">Craft Import</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="{{ actionUrl('CraftImport/entries/load') }}">Populate Products</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Load Entries</h2>
+    <p>Unfortunately you will need to modify the plugin files at this point, to match up your XML nodes and define which fields you&rsquo;re loading.</p>
+    <div class="buttons">
+        <a class="btn submit" href="{{ actionUrl('CraftImport/entries/load') }}">Load Entries</a>
+    </div>
 
 {% endset %}

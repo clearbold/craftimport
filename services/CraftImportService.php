@@ -6,7 +6,7 @@ class CraftImportService extends BaseApplicationComponent
 {
     public function __construct()
     {
-		ini_set('max_execution_time', 9999);
+		ini_set('max_execution_time', 30);
     }
 
 	public function loadEntries()
@@ -14,6 +14,8 @@ class CraftImportService extends BaseApplicationComponent
 		$total = (int) craft()->db->createCommand("SELECT count(1) FROM craft_entries WHERE sectionId = 7 AND typeId = 9")->queryScalar();
 		$i = ($total+1);
 		$retVal = true;
+		echo $total;
+		break;
 		while($i <= 30)
 		{
 			$entry = new EntryModel();
