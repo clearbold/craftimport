@@ -1,4 +1,4 @@
-craft-import
+craftimport
 ============
 
 Craft CMS plugin to import entries from XML

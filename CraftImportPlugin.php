@@ -2,26 +2,26 @@
 
 namespace Craft;
 
-class SeedTestPlugin extends BasePlugin
+class CraftImportPlugin extends BasePlugin
 {
     public function getName()
     {
-        return Craft::t('COS :: Seed Test');
+        return Craft::t('Craft Import');
     }
 
     public function getVersion()
     {
-        return '1.0';
+        return '0.1';
     }
 
     public function getDeveloper()
     {
-        return 'Roi Kingon';
+        return 'Mark Reeves';
     }
 
     public function getDeveloperUrl()
     {
-        return 'http://www.activeingredients.com';
+        return 'http://www.clearbold.com';
     }
 
     public function hasCpSection()
