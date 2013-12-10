@@ -1,0 +1,26 @@
+{% extends "_layouts/cp" %}
+{% set centered = true %}
+
+{% set title = "COS :: Seed Test" %}
+
+{% set content %}
+
+	<p>Populate the DB for testing</p>
+    <table class="data">
+        <thead>
+            <th scope="col">Seed Test</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="{{ actionUrl('SeedTest/users/populate') }}">Populate Users</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ actionUrl('SeedTest/recipes/populate') }}">Populate Recipes</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ actionUrl('SeedTest/products/populate') }}">Populate Products</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endset %}
