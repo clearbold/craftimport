@@ -22,7 +22,7 @@ Click the "Load Entries" button to run your import. **Recommended: Backup your d
 
 The previous blog (in my example) stored images locally and went through an upgrade, so Wygwam fields contained "/images/uploads" and "http://www.DOMAIN.com/images/uploads" references.
 
-In Craft, I'm using Amazon S3 for Assets. I added an image to a blog post to test the syntax, and then added `Lines 27-34` to update those.
+In Craft, I'm using Amazon S3 for Assets. I added an image to a blog post to test the syntax, and then added `Lines 27-35` to update those.
 
 Be sure to comment out these lines if you don't need them, as they will replace any instances of "/images/uploads".
 
@@ -31,7 +31,7 @@ Be sure to comment out these lines if you don't need them, as they will replace 
 All the magic happens in services/CraftImportService.php
 
 * Update the URL on `Line 17` to point to well-formed XML. I created an XML template in an ExpressionEngine site as my source.
-* Update `Lines 39-48` to match your Craft configuration and source nodes. Reference inline comments.
+* Update `Lines 40-49` to match your Craft configuration and source nodes. Reference inline comments.
 * **Note that** the importer does not have a limit on the number of entries and may time out.
 
 ### Customization
