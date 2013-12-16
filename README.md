@@ -25,3 +25,7 @@ All the magic happens in services/CraftImportService.php
 * Update the URL on `Line 17` to point to well-formed XML. I created an XML template in an ExpressionEngine site as my source.
 * Update `Lines 30-39` to match your Craft configuration and source nodes. Reference inline comments.
 * **Note that** the importer does not have a limit on the number of entries and may time out.
+
+### Customization
+
+Customize the plugin's landing page by editing templates/index.html. Add a "**do not use!**" warning!
