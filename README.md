@@ -20,9 +20,11 @@ Click the "Load Entries" button to run your import. **Recommended: Backup your d
 
 ### Images & Assets
 
-The previous blog (in my example) stored images locally and went through an upgrade, so Wygwam fields contained "images/uploads" and "http://www.DOMAIN.com/images/uploads" references.
+The previous blog (in my example) stored images locally and went through an upgrade, so Wygwam fields contained "/images/uploads" and "http://www.DOMAIN.com/images/uploads" references.
 
 In Craft, I'm using Amazon S3 for Assets. I added an image to a blog post to test the syntax, and then added `Lines 27-34` to update those.
+
+Be sure to comment out these lines if you don't need them, as they will replace any instances of "/images/uploads".
 
 ### Configuration
 
