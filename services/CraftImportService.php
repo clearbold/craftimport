@@ -26,7 +26,7 @@ class CraftImportService extends BaseApplicationComponent
 
             // Swap Assets URLs in posts
             // http://s3.amazonaws.com/YOURBUCKET/uploads
-            $newUrl = addslashes('http://s3.amazonaws.com/YOURBUCKET/uploads');
+            // $newUrl = addslashes('http://s3.amazonaws.com/YOURBUCKET/uploads'); // Actually...Should not be needed
             // Make sure you reference this variable below!
             $post = $importEntry->post;
             // Make sure you run the string containing a subsequent substring first!
