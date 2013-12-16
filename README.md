@@ -1,7 +1,7 @@
 craftimport
 ============
 
-Craft CMS plugin to import entries from XML
+Craft CMS plugin to import entries from XML.
 
 ### Credits
 
