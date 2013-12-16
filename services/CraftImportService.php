@@ -14,7 +14,7 @@ class CraftImportService extends BaseApplicationComponent
         $retVal = true;
 
         // Use SimpleXML to fetch an XML export of channel data from an ExpressionEngine site
-        $xml = simplexml_load_file('http://www.somesite.com/blog/export');
+        $xml = simplexml_load_file('http://www.YOURDOMAIN.com/blog/export');
 
         foreach ($xml->blog[0]->entry as $importEntry) {
             // Validate fetch on screen
@@ -23,6 +23,15 @@ class CraftImportService extends BaseApplicationComponent
             echo $importEntry->slug . '<br />';
             echo $importEntry->post . '<br />';
             echo '<br />';*/
+
+            // Swap Assets URLs in posts
+            // http://s3.amazonaws.com/YOURBUCKET/uploads
+            $newUrl = addslashes('http://s3.amazonaws.com/YOURBUCKET/uploads');
+            // Make sure you reference this variable below!
+            $post = $importEntry->post;
+            // Make sure you run the string containing a subsequent substring first!
+            $post = str_replace('http://www.YOURDOMAIN.com/images/uploads', $newUrl, $post);
+            $post = str_replace('/images/uploads', $newUrl, $post);
 
             // Set up new entry
             // Note that we are doing NO validation to detect whether entries already exist
@@ -35,7 +44,7 @@ class CraftImportService extends BaseApplicationComponent
             $entry->getContent()->setAttributes(array(
                 'title' => $importEntry->title,
                 'slug' => $importEntry->slug,
-                'post' => $importEntry->post
+                'post' => $post
             ));
             if ( craft()->entries->saveEntry($entry) )
             {
