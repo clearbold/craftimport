@@ -7,8 +7,6 @@ Craft CMS plugin to import entries from XML.
 
 Initial starting point courtesy [Roi Kingon](https://plus.google.com/112173526450245116573/posts).
 
-### History
-
 ## v0.2
 
 #### Re-import now supported
@@ -24,6 +22,8 @@ In my source XML, I'm outputting ExpressionEngine categories into child nodes: `
 You'll find the loop for those on `Lines 78-104`. You can disable those on `Line 18` by setting `$importTags=false`.
 
 Note that you need to look up and provide your `tagSetId` and your `tagFieldId` to properly load & assign tags.
+
+## v0.1
 
 ### Install
 
