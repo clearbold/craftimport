@@ -15,6 +15,8 @@ Re-importing entries is now supported. However, *slug* was not loading from the 
 
 If your slug (or URL Title) fields in your XML did not match what Craft generated, the v0.2 re-import update will not work for those entries. It will keep creating new entries for each imported entry where *slug* was not matched on.
 
+If you're starting with v0.2, you're all set. Your legacy URL Title/slug is being captured and can be referenced for re-import.
+
 #### Importing tags now supported
 
 In my source XML, I'm outputting ExpressionEngine categories into child nodes: `entry/categories/category`.
