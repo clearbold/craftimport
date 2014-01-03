@@ -6,9 +6,10 @@
 {% set content %}
 
     <h2>Load Entries</h2>
-    <p>Unfortunately you will need to modify the plugin files at this point, to match up your XML nodes and define which fields you&rsquo;re loading.</p>
+    <p>You need to modify the plugin files at this point, to match up your XML nodes and define which fields you&rsquo;re loading. See the <a href="https://github.com/clearbold/craftimport/blob/master/README.md">README</a> on GitHub.</p>
     <div class="buttons">
         <a class="btn submit" href="{{ actionUrl('CraftImport/entries/load') }}">Load Entries</a>
     </div>
+    <p><strong>Note:</strong> Clicking &ldquo;Load Entries&rdquo; will update previously imported entries by comparing <em>slug</em> values. This allows you to re-run the importer as many times as needed.</p>
 
 {% endset %}
