@@ -55,3 +55,7 @@ All the magic happens in services/CraftImportService.php
 ### Customization
 
 Customize the plugin's landing page by editing templates/index.html. Add a "**do not use!**" warning!
+
+### Export
+
+The included `eecms-export-template.html` template is a reference for the XML structure the importer is looking for.
