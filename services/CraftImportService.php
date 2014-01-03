@@ -108,7 +108,6 @@ class CraftImportService extends BaseApplicationComponent
                 break;
             }
         }
-        exit;
         return $retVal;
     }
 }
