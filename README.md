@@ -56,7 +56,7 @@ All the magic happens in services/CraftImportService.php
 
 ### Customization
 
-Customize the plugin's landing page by editing templates/index.html. Add a "**do not use!**" warning!
+Customize the plugin's landing page by editing templates/index.html.
 
 ### Export
 
