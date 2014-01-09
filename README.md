@@ -7,6 +7,10 @@ Craft CMS plugin to import entries from XML.
 
 Initial starting point courtesy [Roi Kingon](https://plus.google.com/112173526450245116573/posts).
 
+## v0.2.01
+
+Fixed tag import to apply multiple categories/tags correctly.
+
 ## v0.2
 
 #### Re-import now supported

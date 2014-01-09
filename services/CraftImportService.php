@@ -76,6 +76,15 @@ class CraftImportService extends BaseApplicationComponent
                 // Note that we're doing nothing to limit the number of records processed
                 //echo "Entry saved<br />\n\n";
                 if ( $importTags ) {
+                    $command = craft()->db->createCommand();
+                    $entryRecord =  $command
+                                    ->select('entryId')
+                                    ->from('entries_i18n')
+                                    ->where("slug='" . $importEntry->slug . "'")
+                                    ->queryRow();
+
+                    $tags = array();
+
                     foreach ($importEntry->categories->category as $category) {
                         $tag = new TagModel();
                         $tag->setId = $tagSetId;
@@ -90,17 +99,13 @@ class CraftImportService extends BaseApplicationComponent
                                         ->where("name='" . $category . "'")
                                         ->queryRow();
                         //echo $tagRecord;
-                        //echo 'tag: ' . $tagRecord['id'] . "<br /><br />\n\n";
+                        echo 'entry: ' . $entryRecord['entryId'] . "<br />";
+                        echo 'tag: ' . $tagRecord['id'] . "<br />";
 
-                        $command = craft()->db->createCommand();
-                        $entryRecord =  $command
-                                        ->select('entryId')
-                                        ->from('entries_i18n')
-                                        ->where("slug='" . $importEntry->slug . "'")
-                                        ->queryRow();
-
-                        craft()->relations->saveRelations($tagFieldId, $entryRecord['entryId'], array($tagRecord['id']));
+                        $tags[] = $tagRecord['id'];
                     }
+                    craft()->relations->saveRelations($tagFieldId, $entryRecord['entryId'], $tags);
+                    echo "<br />\n\n";
                 }
                 continue;
             } else {

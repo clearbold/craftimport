@@ -6,12 +6,12 @@ class CraftImportPlugin extends BasePlugin
 {
     public function getName()
     {
-        return Craft::t('Craft Import');
+        return Craft::t('Craft Simple XML Import');
     }
 
     public function getVersion()
     {
-        return '0.1';
+        return '0.2.01';
     }
 
     public function getDeveloper()
