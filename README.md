@@ -9,7 +9,7 @@ Initial starting point courtesy [Roi Kingon](https://plus.google.com/11217352645
 
 ### Feedback & Next Steps
 
-Feel free to use Issues for any feedback you have. Next step will be to break all the values and conditions in `CraftImportService.php` to a config file for easier usage.
+Feel free to use Issues for any feedback you have. Next step will be to break all the values and conditions in `CraftImportService.php` out to a config file for easier usage.
 
 ## v0.2.01
 
