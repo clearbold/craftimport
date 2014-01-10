@@ -7,6 +7,8 @@ Craft CMS plugin to import entries from XML.
 
 Initial starting point courtesy [Roi Kingon](https://plus.google.com/112173526450245116573/posts).
 
+### Feedback & Next Steps
+
 Feel free to use Issues for any feedback you have. Next step will be to break all the values and conditions in `CraftImportService.php` to a config file for easier usage.
 
 ## v0.2.01
