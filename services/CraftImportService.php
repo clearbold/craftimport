@@ -20,6 +20,8 @@ class CraftImportService extends BaseApplicationComponent
         $tagSetId = 1;
         // If importing tags, set your Tag Field ID
         $tagFieldId = 3;
+        $sectionId = 3; // Visit settings for your Section and check the URL
+        $typeId = 3; // Visit Entry Types for your Section and check the URL for the Entry Type
 
         foreach ($xml->blog[0]->entry as $importEntry) {
             // Validate fetch on screen
@@ -44,7 +46,7 @@ class CraftImportService extends BaseApplicationComponent
             $entryRecord =    $command
                         ->select('entryId')
                         ->from('entries_i18n')
-                        ->where("slug='" . $importEntry->slug . "'")
+                        ->where(array("AND", "slug='" . $importEntry->slug . "'", "sectionId='" . $sectionId . "'"))
                         ->queryRow();
 
             // If existing entry, load that; Else new entry
@@ -61,8 +63,8 @@ class CraftImportService extends BaseApplicationComponent
             //echo "\n\n";
 
             // Find these in craft/app/models/EntryModel
-            $entry->sectionId = 3; // Visit settings for your Section and check the URL
-            $entry->typeId = 3; // Visit Entry Types for your Section and check the URL for the Entry Type
+            $entry->sectionId = $sectionId;
+            $entry->typeId = $typeId; 
             $entry->authorId = 1; // 1 for Admin
             $entry->enabled = true;
             $entry->postDate = $importEntry->entry_date;
@@ -80,7 +82,7 @@ class CraftImportService extends BaseApplicationComponent
                     $entryRecord =  $command
                                     ->select('entryId')
                                     ->from('entries_i18n')
-                                    ->where("slug='" . $importEntry->slug . "'")
+                                    ->where(array("AND", "slug='" . $importEntry->slug . "'", "sectionId='" . $sectionId . "'"))
                                     ->queryRow();
 
                     $tags = array();
