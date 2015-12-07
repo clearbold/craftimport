@@ -11,7 +11,7 @@ class CraftImportPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '0.2.01';
+        return '0.3.0';
     }
 
     public function getDeveloper()

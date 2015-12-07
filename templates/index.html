@@ -11,5 +11,8 @@
         <a class="btn submit" href="{{ actionUrl('CraftImport/entries/load') }}">Load Entries</a>
     </div>
     <p><strong>Note:</strong> Clicking &ldquo;Load Entries&rdquo; will update previously imported entries by comparing <em>slug</em> values. This allows you to re-run the importer as many times as needed.</p>
-
+    <hr />
+    <div class="buttons">
+        <a class="btn submit" href="{{ actionUrl('CraftImport/testMatrix/test') }}">Test Matrix Import</a>
+    </div>
 {% endset %}

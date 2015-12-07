@@ -7,8 +7,9 @@ class CraftImport_EntriesController extends BaseController
 
     public function actionLoad()
     {
-        if(craft()->craftImport->loadEntries()){
-            craft()->userSession->setNotice(Craft::t('Entries loaded.'));
+        $retVal = craft()->craftImport->loadEntries();
+        if($retVal > 0){
+            craft()->userSession->setNotice(Craft::t($retVal . ' entries loaded.'));
         }else{
             craft()->userSession->setError(Craft::t("Couldn't populate entries."));
         }
